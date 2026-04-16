@@ -6,6 +6,7 @@ class AppRoutes extends StatelessWidget {
   static String get allTickets => "allTickets";
   static const ticketScreen = "ticket_screen";
   static const allHotels = "all_hotels";
+  static const hotelDetail = "hotel_detail";
 
 
   @override

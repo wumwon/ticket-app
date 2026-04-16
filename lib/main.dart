@@ -3,7 +3,9 @@ import 'package:ticket_app/base/bottom_nav_bar.dart';
 import 'package:ticket_app/base/widgets/app_routes.dart';
 import 'package:ticket_app/screens/home/all_hotels.dart';
 import 'package:ticket_app/screens/home/all_tickets.dart';
+import 'package:ticket_app/screens/hotel_detail.dart';
 import 'package:ticket_app/screens/ticket/ticket_screen.dart';
+import 'package:get/get.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,20 +13,22 @@ void main() {
 
 }
 
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
 
-    return  MaterialApp(
+    return  GetMaterialApp(
       debugShowCheckedModeBanner: false,
       routes: {
-        "/": (context)=>const BottomNavBar(),
+        "/": (context)=> BottomNavBar(),
         "all_tickets": (context) =>const AllTickets(),
         AppRoutes.allTickets: (context) => const AllTickets(),
         AppRoutes.ticketScreen:(context)=> const TicketScreen(),
         AppRoutes.allHotels:(context)=> const AllHotels(),
+        AppRoutes.hotelDetail:(context)=> HotelDetail(),
       },
     );
   }

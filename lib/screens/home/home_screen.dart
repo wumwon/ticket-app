@@ -9,8 +9,8 @@ import 'package:ticket_app/base/widgets/ticket_view.dart';
 import 'package:ticket_app/screens/home/widgets/hotel.dart';
 
 class HomeScreen extends StatelessWidget {
-  final Map<String,dynamic> hotel;
-  const HomeScreen({super.key,  required this.hotel});
+  final Map<String, dynamic> hotel;
+  const HomeScreen({super.key, required this.hotel});
 
   @override
   Widget build(BuildContext context) {
@@ -72,35 +72,55 @@ class HomeScreen extends StatelessWidget {
                 AppDoubleText(
                   bigText: 'Upcoming Flights',
                   smallText: 'View all',
-                  func: ()=> Navigator.pushNamed(context, AppRoutes.allTickets),
+                  func: () =>
+                      Navigator.pushNamed(context, AppRoutes.allTickets),
                 ),
                 const SizedBox(height: 20),
                 SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: ticketList
-                        .map((singleTicket) => TicketView(ticket: singleTicket))
+                        .take(2)
+                        .map((singleTicket) => 
+                        GestureDetector(
+                          onTap: (){
+                              var index = ticketList.indexOf(singleTicket);
+
+                        Navigator.pushNamed(
+                          context,
+                          AppRoutes.ticketScreen,
+                          arguments: {"index": index},
+                        );
+                          },
+                          child: TicketView(ticket: singleTicket)))
                         .toList(),
                   ),
                 ),
                 const SizedBox(height: 40),
                 AppDoubleText(
-                  bigText: 'Hotels', 
+                  bigText: 'Hotels',
                   smallText: 'View all',
-                  func: (){
-                     Navigator.pushNamed(context, AppRoutes.allHotels);
+                  func: () {
+                    Navigator.pushNamed(context, AppRoutes.allHotels);
                   },
+                ),
+                const SizedBox(height: 20),
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: hotelList
+                        .take(2)
+                        .map((singleHotel) => GestureDetector(
+                          onTap: (){
+                            var index = hotelList.indexOf(singleHotel);
+                             Navigator.pushNamed(context, AppRoutes.hotelDetail, arguments: {
+                             "index":index
+                              });
+                          },
+                          child: Hotel(hotel: singleHotel)))
+                        .toList(),
                   ),
-                  const SizedBox(height: 20),
-                  SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Row(
-                      children: hotelList
-                      .take(2)
-                      .map((singleHotel) =>
-                      Hotel(hotel: singleHotel))
-                      .toList(),
-                    )),
+                ),
               ],
             ),
           ),

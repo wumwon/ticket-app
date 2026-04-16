@@ -91,18 +91,21 @@ List<Map<String, dynamic>> hotelList = [
     'image': 'hotel_room.jpg',
     'place': 'Open Space',
     'destination': 'London',
-    'price': 25
+    'price': 25,
+    'detail': 'In this article, we will create a custom scrollable app bar with a background image in Flutter. The app bar will shrink ad the use scroll up, and it will include a back button Below the image. we will display some descriptive text with a more or less button to show or hide additional text. Finally, we will add a section to display recent images in a horizontal list.'
   },
   {
     'image': 'city_view.jpeg',
     'place': 'Global Will',
     'destination': 'London',
-    'price': 40
+    'price': 40,
+    'detail': 'In this london\'s we will create a custom scrollable app bar with a background image in Flutter. The app bar will shrink ad the use scroll up, and it will include a back button Below the image. we will display some descriptive text with a more or less button to show or hide additional text. Finally, we will add a section to display recent images in a horizontal list.'
   },
   {
     'image': 'pool_view.jpg',
     'place': 'Best city pool',
     'destination': 'Dubai',
-    'price': 68
+    'price': 68,
+    'detail': 'In this UAE\'s we will create a custom scrollable app bar with a background image in Flutter. The app bar will shrink ad the use scroll up, and it will include a back button Below the image. we will display some descriptive text with a more or less button to show or hide additional text. Finally, we will add a section to display recent images in a horizontal list.'
   },
 ];
