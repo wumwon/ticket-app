@@ -92,7 +92,8 @@ class HomeScreen extends StatelessWidget {
                           arguments: {"index": index},
                         );
                           },
-                          child: TicketView(ticket: singleTicket)))
+               
+                         child: TicketView(ticket: singleTicket)))
                         .toList(),
                   ),
                 ),

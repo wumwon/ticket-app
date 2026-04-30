@@ -118,7 +118,7 @@ class _HotelDetailState extends State<HotelDetail> {
                         fit: BoxFit.cover,
                       ),
                     );
-                  },
+                  },  
                 ),
               ),
             ]),

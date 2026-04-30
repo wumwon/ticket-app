@@ -24,7 +24,7 @@ class BottomNavBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print("my tab val ${controller.selectedIndex.value}");
+   
     return Obx((){
       return Scaffold(
       
@@ -46,7 +46,7 @@ class BottomNavBar extends StatelessWidget {
             icon: Icon(FluentSystemIcons.ic_fluent_search_regular),
             activeIcon: Icon(FluentSystemIcons.ic_fluent_search_filled),
             label: "Search",
-          ),
+          ),    
 
           BottomNavigationBarItem(
             icon: Icon(FluentSystemIcons.ic_fluent_ticket_regular),

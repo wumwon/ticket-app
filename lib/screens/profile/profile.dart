@@ -15,7 +15,7 @@ class ProfileScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppStyles.bgColor,
       body: ListView(
-        padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+        padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
         children: [
           Padding(padding: EdgeInsets.only(top: 40)),
           Row(
@@ -113,7 +113,7 @@ class ProfileScreen extends StatelessWidget {
                       backgroundColor: Colors.white,
                       child: Icon(
                         FluentSystemIcons.ic_fluent_lightbulb_filament_filled,
-                        color: AppStyles.primaryColor,
+                        color: AppStsyles.primaryColor,
                         size: 27,
                       ),
                     ),
